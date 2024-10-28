@@ -90,7 +90,7 @@ TEST(string_calculator_add, when_passed_negative_number)
   //Arrange
   StringCalculator objUnderTest;
   string input="1,-2,-3";
-  int expectedValue=6;
+  string expectedValue="Negatives not allowed: -2,-3";
   //Act
   int actualValue=objUnderTest.Add(input);
   //ASSERT
