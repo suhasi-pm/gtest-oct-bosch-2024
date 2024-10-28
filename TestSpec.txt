@@ -28,5 +28,5 @@ string_calculator_add
    when_passed_multiple_delimiters
 	sums_on_each_delimiter
 
-	when_passed_multiple_multicharacter_delimiters
-		sums_on_each_delimiter
+   when_passed_multiple_multicharacter_delimiters
+	sums_on_each_delimiter
