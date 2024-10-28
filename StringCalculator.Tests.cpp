@@ -94,7 +94,7 @@ TEST(string_calculator_add, when_passed_negative_number)
   //Act
   int actualValue=objUnderTest.Add(input);
   //ASSERT
-  ASSERT_EQ(actualValue, expectedValue);
+  ASSERT_STREQ(actualValue, expectedValue);
 }
 
 TEST(string_calculator_add, when_passed_numbers_over_1000)
