@@ -72,14 +72,7 @@ TEST(string_calculator_add, when_passed_negative_number)
   StringCalculator objUnderTest;
   string input="1,-2,-3";
   string expectedValue="Negatives not allowed: -2,-3";
-  ASSERT_THROW({
-      try {
-          objUnderTest.Add(input);
-      } catch (const std::invalid_argument& e) {
-          ASSERT_EQ(e.what(), expectedValue); // Compare the exception message
-          throw; // Re-throw the exception to pass the ASSERT_THROW check
-      }
-  }, std::invalid_argument);
+  ASSERT_THROW(objUnderTest.Add(input),std::invalid_argument);
 }
 
 TEST(string_calculator_add, when_passed_numbers_over_1000)
