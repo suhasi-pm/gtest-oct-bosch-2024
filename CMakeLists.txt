@@ -20,8 +20,8 @@ add_executable(
   unittestcode
   #StringCalculator.cpp
   #StringCalculator.ValueParam.Tests.cpp
-  TestChallenge.cpp
-  TestChallenge.Tests.cpp
+  speedMonitor/VehicleSpeedMonitor.cpp
+  speedMonitor/VehicleSpeedMonitor.Tests.cpp
  )
 target_link_libraries(
   unittestcode
