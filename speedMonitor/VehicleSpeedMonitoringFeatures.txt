@@ -1,0 +1,25 @@
+Monitoring system for vehicle speed with random data, which is used for testing where speed data needs to be checed with threshold and communicated to a server.
+
+IOTCloudCommunicator:
+pushMessage sends a message to a cloud server and returns a status code:
+Codes 200–400 indicate successful communication.
+Codes 400–500 indicate an error.
+The status code is randomly generated.
+
+BNFSpeedSensor:
+getCurrentSpeed gets the vehicle's current speed in km/h.
+The speed is randomly chosen between 1 and 100 km/h.
+
+SpeedMonitor:
+Contains a speed threshold, _speedThreshold.
+monitor function for checking if the speed exceeds the threshold.
+
+Monitor function does the following things:
+Threshold Check: _speedThreshold is checked between 1 and 100. If it falls outside this range, a message is printed to indicate invalid threshold.
+
+Current Speed Check: BNFSpeedSensor is created to get the current speed. The current speed is displayed in km/h.
+
+ If the current speed exceeds _speedThreshold, it’s converted to miles per hour (mph).
+ A message with the speed in mph is created and sent to IOTCloudCommunicator via pushMessage.
+
+Communication Check: If the status code is above 400, indicating an error, a message is printed to indicate a communication failure.
