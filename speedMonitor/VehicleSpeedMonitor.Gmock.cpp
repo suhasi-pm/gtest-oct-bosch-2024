@@ -22,17 +22,17 @@ class MockSpeedSensor:public ISpeedSensor
       MOCK_METHOD( int , getCurrentSpeed, ());
 };
 
-TEST(VehicleSpeedMonitorTestSuite,LoggerInteractionTesting)
+TEST(VehicleSpeedMonitorTestSuite, LoggerInteractionTesting)
 {
    SpeedMonitor objUnderTest{150};
    MockCommunicator communicator;
    MockSpeedSensor speedSensor;
    MockLogger logger;
-   EXPECT_CALL(logger, write(StrEq("_speedThreshold value must be in the ramge {1-100} 150")));
+   EXPECT_CALL(logger, write(StrEq("_speedThreshold value must be in the range {1-100} 150")));
    objUnderTest.monitor(&communicator, &speedSensor, &logger);
 }
 
-TEST(VehicleSpeedMonitorTestSuite,InteractionTesting)
+TEST(VehicleSpeedMonitorTestSuite, InteractionTesting)
 {
    SpeedMonitor objUnderTest{40};
    MockCommunicator communicator;
