@@ -6,7 +6,7 @@ using namespace std;
 class TestChallengeFixture:public testing::Test
 {
   protected:
-    TestChallenge *objUnderTest;
+    int result;
   void SetUp() override
   {
       result = 0;
