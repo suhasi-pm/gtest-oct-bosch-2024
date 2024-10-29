@@ -5,12 +5,12 @@
 class MockLogger:public ILogger
 {
   public:
-    int writeMethodCallCount=0;
+    int writeMethodCallCount = 0;
     string  writeMethodArg;
     void write(const string& message)
     {
-        this->writeMethodArg=message;
-        this->writeMethodCallCount+=1;
+        this->writeMethodArg = message;
+        this->writeMethodCallCount += 1;
     }
 };
 
