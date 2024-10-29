@@ -1,4 +1,4 @@
-#include "VehicleSpeedMonitor.h"
+de#include "VehicleSpeedMonitor.h"
 #include <gmock/gmock.h>
 using testing::StrEq; //Built In Matcher
 using testing::Return; //Built in Action
@@ -7,19 +7,19 @@ using testing::_;
 class MockLogger:public ILogger
 {
    public:
-      MOCK_METHOD(void, write, (const string& message));
+      MOCK_METHOD(void, write, (const string& message), (override));
 };
 
 class MockCommunicator:public IMessageCommunicator
 {
    public:
-      MOCK_METHOD(int, pushMessage, (const string& message));
+      MOCK_METHOD(int, pushMessage, (const string& message), (override));
 };
 
 class MockSpeedSensor:public ISpeedSensor
 {
    public:
-      MOCK_METHOD( int , getCurrentSpeed, ());
+      MOCK_METHOD( int , getCurrentSpeed, (), (override));
 };
 
 TEST(VehicleSpeedMonitorTestSuite, LoggerInteractionTesting)
