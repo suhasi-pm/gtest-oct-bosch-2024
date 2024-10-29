@@ -28,11 +28,6 @@ INSTANTIATE_TEST_SUITE_P(ValidValDataSet, StringCalculatorAddParameterizedFixtur
   make_tuple("1,2000,2", 3), make_tuple("1[#]$$$[****]//2", 3)
 ));
 
-INSTANTIATE_TEST_SUITE_P(NegetiveValDataSet, StringCalculatorAddParameterizedFixture, testing::Values(
-  make_tuple("", 15), make_tuple("0", 14), make_tuple("1", 12), make_tuple("1,2", 8)
-));
-
-
 TEST_P(StringCalculatorAddParameterizedFixture, DataDrivenTestCase)
 {
     string input = std::get<0>(GetParam());
