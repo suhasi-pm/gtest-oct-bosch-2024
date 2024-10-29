@@ -4,7 +4,7 @@ void SpeedMonitor::monitor(IMessageCommunicator* communicator, ISpeedSensor* sen
 {
    if(_speedThreshold  < 1 || _speedThreshold > 100)
    {
-      logger->write("_speedThreshold value must be in the ramge {1-100} " + to_string(_speedThreshold) + "\n");
+      logger->write("_speedThreshold value must be in the range {1-100} " + to_string(_speedThreshold) + "\n");
    }
    int currentSpeedInKmph = sensor->getCurrentSpeed();
    logger->write("Current Speed In Kmph " + to_string(currentSpeedInKmph) + "\n");
