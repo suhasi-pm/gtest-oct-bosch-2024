@@ -21,7 +21,7 @@ add_executable(
   #StringCalculator.cpp
   #StringCalculator.ValueParam.Tests.cpp
   speedMonitor/VehicleSpeedMonitor.cpp
-  speedMonitor/VehicleSpeedMonitor.Tests.cpp
+  speedMonitor/VehicleSpeedMonitor.Gmock.cpp
  )
 target_link_libraries(
   unittestcode
