@@ -1,5 +1,5 @@
 class ISpeedSensor
 {
 public:
-    virtaul int getCurrentSpeed() = 0;
+    virtual int getCurrentSpeed() = 0;
 };
