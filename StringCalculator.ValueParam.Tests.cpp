@@ -24,7 +24,8 @@ class StringCalculatorAddParameterizedFixture:public StringCalculatorAddFixture,
 };
 
 INSTANTIATE_TEST_SUITE_P(ValidValDataSet, StringCalculatorAddParameterizedFixture, testing::Values(
-  make_tuple("", 0), make_tuple("0", 0), make_tuple("1", 1), make_tuple("1,2", 3)
+  make_tuple("", 0), make_tuple("0", 0), make_tuple("1", 1), make_tuple("1,2", 3), make_tuple("1,2,3", 6), make_tuple("1*****2", 3),
+  make_tuple("1,2000,2", 3), make_tuple("1[#]$$$[****]//2", 3)
 ));
 
 INSTANTIATE_TEST_SUITE_P(NegetiveValDataSet, StringCalculatorAddParameterizedFixture, testing::Values(
