@@ -1,0 +1,5 @@
+TestCaseName,TestCase,Scenario/Descrption,Input/PreCondition,ExpectedOutput
+SpeedThresholdOutOfRange,Test if an invalid speedThreshold (outside range 1–100) produces an error message,speedThreshold below 0 or above 100,Error message: "_speedThreshold value must be in the range {1-100} X" 
+SpeedBelowThreshold,Test when the current speed is below the threshold,_speedThreshold within {1,100}, getCurrentSpeed() set it below the _speedThreshold,No alert message is displayed, since the current speed is below the threshold
+SpeedAboveThresholdCommunicationOK,Test when the current speed is above the threshold, and communication succeeds,_speedThreshold within {1,100}, getCurrentSpeed() = set it above _speedThreshold, pushMessage() to be within {200,400},Displays: "Current Speed In Kmph X", confirming the speed and communication success
+SpeedAboveThresholdCommunicationNOK,Test when the current speed is above the threshold, but communication fails,_speedThreshold within {1,100}, getCurrentSpeed() = set it above _speedThreshold, pushMessage() to be within {400,500},Displays error: "Error In Communication Unable to Contact Server Current Speed in Miles X"
